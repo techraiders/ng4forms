@@ -17,6 +17,19 @@ export class TemplateDrivenComponent implements OnInit {
   ngOnInit() {
   }
 
+  suggestUserName() {
+    const suggestedName = 'techraiders';
+    this.signupForm.setValue({
+      userData: {
+        username: suggestedName,
+        email: 'hello_navneet@hotmail.com',
+      },
+      secret: 'pet',
+      questionAnswer: '',
+      gender: 'male'
+    });
+  }
+
   /*onSubmit(form: NgForm) {
     console.log(form);
   }*/
