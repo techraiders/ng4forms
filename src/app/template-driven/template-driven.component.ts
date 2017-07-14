@@ -9,6 +9,7 @@ import {NgForm} from '@angular/forms';
 export class TemplateDrivenComponent implements OnInit {
   @ViewChild('f') signupForm: NgForm;
   defaultQuestion = 'pet';
+  answer = '';
 
   constructor() { }
 
