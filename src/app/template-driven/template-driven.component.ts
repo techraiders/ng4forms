@@ -19,7 +19,8 @@ export class TemplateDrivenComponent implements OnInit {
 
   suggestUserName() {
     const suggestedName = 'techraiders';
-    this.signupForm.setValue({
+
+    /*this.signupForm.setValue({
       userData: {
         username: suggestedName,
         email: 'hello_navneet@hotmail.com',
@@ -27,6 +28,16 @@ export class TemplateDrivenComponent implements OnInit {
       secret: 'pet',
       questionAnswer: '',
       gender: 'male'
+    });*/ // NOT A RECOMMENDED METHOD
+    // used to override whole form
+
+    /**
+     * Used to override specific element value of form
+     */
+    this.signupForm.form.patchValue({
+      userData:{
+        username: 'navneet'
+      }
     });
   }
 
