@@ -10,6 +10,7 @@ export class TemplateDrivenComponent implements OnInit {
   @ViewChild('f') signupForm: NgForm;
   defaultQuestion = 'pet';
   answer = '';
+  genders = ['male', 'female'];
 
   constructor() { }
 
