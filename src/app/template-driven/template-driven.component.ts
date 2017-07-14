@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -7,13 +7,19 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./template-driven.component.css']
 })
 export class TemplateDrivenComponent implements OnInit {
+  @ViewChild('f') signupForm: NgForm;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm) {
+  /*onSubmit(form: NgForm) {
     console.log(form);
+  }*/
+
+  onSubmit() {
+    console.log(this.signupForm);
   }
+
 }
