@@ -6,6 +6,7 @@ import {NgForm} from '@angular/forms';
   templateUrl: './template-driven.component.html',
   styleUrls: ['./template-driven.component.css']
 })
+
 export class TemplateDrivenComponent implements OnInit {
   @ViewChild('f') signupForm: NgForm;
   defaultQuestion = 'pet';
@@ -62,5 +63,6 @@ export class TemplateDrivenComponent implements OnInit {
     this.user.secretQuestion = this.signupForm.value.secret;
     this.user.answer = this.signupForm.value.questionAnswer;
     this.user.gender = this.signupForm.value.gender;
+    this.signupForm.reset();
   }
 }
