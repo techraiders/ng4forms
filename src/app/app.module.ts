@@ -4,14 +4,14 @@ import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { FormComponent } from './form/form.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { ServersComponent } from './servers/servers.component';
 import { AdminComponent } from './users/admin/admin.component';
 
 const appRoutes: Routes = [
-  {path: '', component: TemplateDrivenComponent},
+  {path: '', component: FormComponent},
   {path: 'users', component: UsersComponent, children: [
     {path: 'admin', component: AdminComponent}
   ]},
@@ -21,7 +21,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateDrivenComponent,
+    FormComponent,
     UsersComponent,
     HomeComponent,
     ServersComponent,

@@ -3,17 +3,18 @@ import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'template-driven',
-  templateUrl: './template-driven.component.html',
-  styleUrls: ['./template-driven.component.css']
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
 })
 
-export class TemplateDrivenComponent implements OnInit {
+export class FormComponent implements OnInit {
   @ViewChild('f') signupForm: NgForm;
   user = {
     firstname: '',
     lastname: '',
     email: '',
-    contact: ''
+    contact: '',
+    address: ''
   }
 
   users = [];
@@ -32,7 +33,6 @@ export class TemplateDrivenComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.displayData();
-    // localStorage.users = this.users;
     this.onReset();
   }
 
@@ -45,6 +45,7 @@ export class TemplateDrivenComponent implements OnInit {
     this.user.lastname = this.signupForm.value.userData.lastname;
     this.user.email = this.signupForm.value.email;
     this.user.contact = this.signupForm.value.contact;
+    this.user.address = this.signupForm.value.address;
     this.users.push(this.signupForm.value);
     console.log(this.users[0]);
     this.saveToLocalStorage();
