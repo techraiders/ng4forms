@@ -1,22 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {Routes, RouterModule} from '@angular/router';
 
-import { FormsComponent } from './forms.component';
-import { DataDrivenComponent } from './data-driven/data-driven.component';
+import { AppComponent } from './app.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { UsersComponent } from './users/users.component';
+import { HomeComponent } from './home/home.component';
+import { ServersComponent } from './servers/servers.component';
+
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'users', component: UsersComponent},
+  {path: 'servers', component: ServersComponent},
+];
 
 @NgModule({
   declarations: [
-    FormsComponent,
-    DataDrivenComponent,
-    TemplateDrivenComponent
+    AppComponent,
+    TemplateDrivenComponent,
+    UsersComponent,
+    HomeComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [FormsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
