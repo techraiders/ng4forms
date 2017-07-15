@@ -11,6 +11,14 @@ export class TemplateDrivenComponent implements OnInit {
   defaultQuestion = 'pet';
   answer = '';
   genders = ['male', 'female'];
+  user = {
+    username: '',
+    email: '',
+    secretQuestion: '',
+    answer: '',
+    gender: ''
+  }
+  submitted = false;
 
   constructor() { }
 
@@ -46,7 +54,13 @@ export class TemplateDrivenComponent implements OnInit {
   }*/
 
   onSubmit() {
+    // Extracts data from the form and sets value on the class's user property, to further display into the view
+    this.submitted = true;
     console.log(this.signupForm);
+    this.user.username = this.signupForm.value.userData.username;
+    this.user.email = this.signupForm.value.userData.email;
+    this.user.secretQuestion = this.signupForm.value.secret;
+    this.user.answer = this.signupForm.value.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
   }
-
 }
