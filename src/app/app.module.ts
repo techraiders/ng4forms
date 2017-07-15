@@ -8,10 +8,13 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { ServersComponent } from './servers/servers.component';
+import { AdminComponent } from './users/admin/admin.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'users', component: UsersComponent},
+  {path: '', component: TemplateDrivenComponent},
+  {path: 'users', component: UsersComponent, children: [
+    {path: 'admin', component: AdminComponent}
+  ]},
   {path: 'servers', component: ServersComponent},
 ];
 
@@ -21,7 +24,8 @@ const appRoutes: Routes = [
     TemplateDrivenComponent,
     UsersComponent,
     HomeComponent,
-    ServersComponent
+    ServersComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

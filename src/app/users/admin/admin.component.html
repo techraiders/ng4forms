@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <caption> LIST OF REGISTERED USERS </caption>
+    <thead>
+      <tr class="bg-success">
+        <th> FIRST NAME </th>
+        <th> LAST NAME </th>
+        <th> EMAIL</th>
+        <th> CONTACT</th>
+        <th> ADDRESS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td> {{user.userData.firstname}} </td>
+        <td> {{user.userData.lastname}} </td>
+        <td> {{user.email}} </td>
+        <td> {{user.contact}} </td>
+        <td> {{user.address}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
