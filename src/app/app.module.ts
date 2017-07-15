@@ -8,6 +8,7 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { ServersComponent } from './servers/servers.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     TemplateDrivenComponent,
     UsersComponent,
     HomeComponent,
-    ServersComponent
+    ServersComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
