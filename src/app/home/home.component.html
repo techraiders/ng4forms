@@ -7,3 +7,9 @@
 </p>
 
 <p *appUnless="false"> I m visible for false condition </p>
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">The value is {{ value }}</p>
+  <p *ngSwitchCase="10">The value is {{value}} </p>
+  <p *ngSwitchDefault>The value is default </p>
+</div>
