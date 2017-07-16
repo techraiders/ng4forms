@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ServersComponent } from './servers/servers.component';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless/unless.directive';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     ServersComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
+    UnlessDirective,
   ],
   imports: [
     BrowserModule,
